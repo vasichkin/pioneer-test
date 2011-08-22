@@ -1,0 +1,14 @@
+Feature: Install, initialize test enviroment, run instances
+    Try to start services, create database, user, project, network
+
+    Scenario: Create nova enviroment
+	#Install rpms
+	#Start nova services
+	#Create database
+	Create admin user "osth-user-admin"
+	Create project "osth-project" for user "osth-user-admin"
+	Create network "10.222.0.0/24" with "1" nets, "256" ips per network
+	Check novarc function for project "osth-project", user "osth-user-admin"
+	Register image "images/RS_ubu-SSH-key.tar.gz" using project "osth-project", user "osth-user-admin"
+	#Start Instance
+
